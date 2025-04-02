@@ -1,1 +1,7 @@
+This directory also includes two scripts for performing alignments:
 
+    1. minimap.sh: This script utilizes the Minimap2 tool to align the assembled FASTA file (obtained from HiFiASM) to the raw BAM file, producing an assembled BAM file.
+
+    2. pbmm2.sh: This script uses pbmm2, a tool from Pacific Biosciences, to achieve the same result as minimap.sh—aligning the assembled FASTA file to the raw BAM file and generating an assembled BAM file.
+
+Both scripts serve the purpose of aligning assembled sequences to raw data, providing different options for alignment tools.
