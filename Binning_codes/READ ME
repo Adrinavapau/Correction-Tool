@@ -1,1 +1,11 @@
+Directory Overview
 
+This directory contains three shell scripts, each dedicated to a different tool used for binning contigs:
+
+    1. metabat2.sh: This script outlines the steps required to use the MetaBAT2 tool for binning contigs. It provides a detailed process for generating metagenome-assembled genomes (MAGs).
+
+    2. macbin.sh: This script utilizes the MaxBin tool for binning. It guides the user through the steps necessary to apply MaxBin to metagenomic data, aiming to improve binning accuracy.
+
+    3. semi.sh: This script is designed for performing binning with the SemiBin tool. It includes the required procedures to use SemiBin for contig binning in metagenomic datasets.
+
+Each script is intended to provide a straightforward way to process metagenomic data using these popular binning tools.
