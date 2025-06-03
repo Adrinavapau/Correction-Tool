@@ -22,12 +22,14 @@ The main script to run is `correction_tool.sh`. This script automates the integr
 To display the help message and usage instructions, run:
 
 ```bash
+cd CorrectionTool
 ./correction_tool.sh -h
 ```
 
 ### Basic Usage Format
 
 ```bash
+cd CorrectionTool
 ./correction_tool.sh [-s] [-t] [-c] <bins_dir> <SMRT_dir> <assembly_fasta>
 ```
 
