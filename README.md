@@ -9,7 +9,8 @@ The Correction Tool is designed to integrate methylation information into genomi
 To set up the required environment, it is recommended to create a conda environment with the following command:
 
 ```bash
-conda create -n Correction_tool -c bioconda -c conda-forge -c defaults r-base=4.3 r-essentials r-matrix r-mass r-ggplot2 r-reticulate r-rtsne r-umap r-mgcv r-dbscan r-rspectra checkm2 bedops gffread emboss
+wget https://raw.githubusercontent.com/Adrinavapau/Correction-Tool/main/environment_clean.yml
+conda env create -f environment_clean.yml
 ```
 
 This command installs all necessary dependencies for the proper functioning of the tool.
