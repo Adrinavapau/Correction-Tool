@@ -32,3 +32,21 @@ The usage format is:
 
 ## Help Message Displayed by the Script
 
+This script is used to call all the tools and scripts necessary to create new bins
+that will contain methylation information.
+Each script includes a brief explanation of its function.
+
+```bash
+Us: ./correction_tool.sh [-s] <bins_dir> <SMRT_dir> <assembly_fasta>
+
+Option:
+-h Shows this guide and ends.
+-s Contigs with _ : changes '_' for '=' in the files needed .gff.
+-t In case there are inf in the clustering.
+-c Make the default cluster and the default bins (It's better if you make the cluster manual and then add it to the final step)
+
+Arguments:
+bins_dir Path to the bins directory.
+SMRT_dir Path to the output directory of SMRT Link.
+assembly_fasta Assembled fasta recommended: Hifiasm or Flye.
+```
