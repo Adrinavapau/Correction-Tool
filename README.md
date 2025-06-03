@@ -16,7 +16,7 @@ This command installs all necessary dependencies for the proper functioning of t
 
 ## Usage
 
-The main script to run is `correction_tool.sh`. This script calls all the necessary tools and scripts to create new bins containing methylation information. Each component includes a brief explanation of its role.
+The main script to run is `correction_tool.sh`. This script automates the integration of methylation data into genomic bins. However, the way you run it significantly impacts what outputs you receive and how you should proceed.
 
 To display the help message and usage instructions, run:
 
@@ -24,29 +24,66 @@ To display the help message and usage instructions, run:
 ./correction_tool.sh -h
 ```
 
-The usage format is:
+### Basic Usage Format
 
 ```bash
-./correction_tool.sh [-s] <bins_dir> <SMRT_dir> <assembly_fasta>
+./correction_tool.sh [-s] [-t] [-c] <bins_dir> <SMRT_dir> <assembly_fasta>
 ```
 
-## Help Message Displayed by the Script
+### Recommended Workflow (Manual Clustering)
 
-This script is used to call all the tools and scripts necessary to create new bins
-that will contain methylation information.
-Each script includes a brief explanation of its function.
+If you **do not** use the `-c` option, the script will generate **two output files**, but **not the bins**:
 
-```bash
-Us: ./correction_tool.sh [-s] <bins_dir> <SMRT_dir> <assembly_fasta>
+- `summary.csv`: Contains the count of methylated motifs per contig.
+- `result.csv`: Contains the total count of each motif per contig.
 
-Option:
--h Shows this guide and ends.
--s Contigs with _ : changes '_' for '=' in the files needed .gff.
--t In case there are inf in the clustering.
--c Make the default cluster and the default bins (It's better if you make the cluster manual and then add it to the final step)
+These files are essential for **manual clustering**, which is **strongly recommended** because methylation patterns vary widely between datasets. Default parameters may lead to incorrect or suboptimal bin clustering.
 
-Arguments:
-bins_dir Path to the bins directory.
-SMRT_dir Path to the output directory of SMRT Link.
-assembly_fasta Assembled fasta recommended: Hifiasm or Flye.
-```
+#### Steps for Manual Clustering:
+
+1. **Normalize the data**: Divide the values in `summary.csv` by the corresponding values in `result.csv`. This gives you the methylation ratio per motif per contig.
+
+2. **Cluster the data manually** using your preferred method and parameters. This allows for tailored analysis based on the unique properties of your dataset.
+
+3. **Create a cluster assignment file** with the following format (CSV, no header):
+    ```csv
+    "contig_100",1
+    "contig_101",1
+    "contig_102",1
+    ```
+    - First column: Contig names
+    - Second column: Cluster IDs
+    - **Important**: There must be **no header** in this file.
+
+4. **Run the final integration step** using `finalstep.sh`:
+    ```bash
+    ./finalstep.sh <bins_dir> <your_cluster_file.csv> <assembly_fasta>
+    ```
+
+This step will create the new methylation-informed bins.
+
+### Optional Flags
+
+- `-h` : Show the help message and exit.
+- `-s` : Replace underscores (`_`) with equals signs (`=`) in contig names within `.gff` files.
+- `-t` : Handle infinite (`inf`) values in clustering (optional).
+- `-c` : **Not recommended** — runs default clustering and binning automatically.
+
+---
+
+### Why You Should Avoid `-c`
+
+The `-c` option uses a default clustering method with fixed parameters. This may work in some cases but is generally **not reliable** because:
+
+- Methylation patterns differ between organisms, samples, and sequencing conditions.
+- Fixed parameters may overfit or underfit your data.
+- Poor clustering can result in misleading bins and incorrect biological interpretation.
+
+---
+
+### Required Arguments
+
+- `bins_dir` : Path to the directory containing the original bins.
+- `SMRT_dir` : Path to the SMRT Link output directory.
+- `assembly_fasta` : Path to the assembled FASTA file (e.g., from Hifiasm or Flye).
+
