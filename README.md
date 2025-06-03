@@ -36,7 +36,7 @@ To display the help message and usage instructions, run:
 If you **do not** use the `-c` option, the script will generate **two output files**, but **not the bins**:
 
 - `summary.csv`: Contains the count of methylated motifs per contig.
-- `result.csv`: Contains the total count of each motif per contig.
+- `resultados.csv`: Contains the total count of each motif per contig.
 
 These files are essential for **manual clustering**, which is **strongly recommended** because methylation patterns vary widely between datasets. Default parameters may lead to incorrect or suboptimal bin clustering.
 
