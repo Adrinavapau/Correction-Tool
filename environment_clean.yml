@@ -1,4 +1,4 @@
-name: testtool
+name: Correction_tool
 channels:
   - conda-forge
   - bioconda
