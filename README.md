@@ -36,7 +36,7 @@ cd CorrectionTool
 ### Optional Flags
 
 - `-h` : Show the help message and exit.
-- `-s` : Replace underscores (`_`) with equals signs (`=`) in contig names within `.gff` files.
+- `-s` : Replace underscores (`_`) of contigs with equals signs (`=`) in contig names within `.gff` files (contigs names can't have "_").
 - `-t` : Handle infinite (`inf`) values in clustering (optional).
 - `-c` : **Not recommended** — runs default clustering and binning automatically.
 
