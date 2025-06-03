@@ -31,6 +31,33 @@ To display the help message and usage instructions, run:
 ./correction_tool.sh [-s] [-t] [-c] <bins_dir> <SMRT_dir> <assembly_fasta>
 ```
 
+### Optional Flags
+
+- `-h` : Show the help message and exit.
+- `-s` : Replace underscores (`_`) with equals signs (`=`) in contig names within `.gff` files.
+- `-t` : Handle infinite (`inf`) values in clustering (optional).
+- `-c` : **Not recommended** — runs default clustering and binning automatically.
+
+---
+
+### Why You Should Avoid `-c`
+
+The `-c` option uses a default clustering method with fixed parameters. This may work in some cases but is generally **not reliable** because:
+
+- Methylation patterns differ between organisms, samples, and sequencing conditions.
+- Fixed parameters may overfit or underfit your data.
+- Poor clustering can result in misleading bins and incorrect biological interpretation.
+
+---
+
+### Required Arguments
+
+- `bins_dir` : Path to the directory containing the original bins.
+- `SMRT_dir` : Path to the SMRT Link output directory.
+- `assembly_fasta` : Path to the assembled FASTA file (e.g., from Hifiasm or Flye).
+
+---
+
 ### Recommended Workflow (Manual Clustering)
 
 If you **do not** use the `-c` option, the script will generate **two output files**, but **not the bins**:
@@ -63,28 +90,5 @@ These files are essential for **manual clustering**, which is **strongly recomme
 
 This step will create the new methylation-informed bins.
 
-### Optional Flags
 
-- `-h` : Show the help message and exit.
-- `-s` : Replace underscores (`_`) with equals signs (`=`) in contig names within `.gff` files.
-- `-t` : Handle infinite (`inf`) values in clustering (optional).
-- `-c` : **Not recommended** — runs default clustering and binning automatically.
-
----
-
-### Why You Should Avoid `-c`
-
-The `-c` option uses a default clustering method with fixed parameters. This may work in some cases but is generally **not reliable** because:
-
-- Methylation patterns differ between organisms, samples, and sequencing conditions.
-- Fixed parameters may overfit or underfit your data.
-- Poor clustering can result in misleading bins and incorrect biological interpretation.
-
----
-
-### Required Arguments
-
-- `bins_dir` : Path to the directory containing the original bins.
-- `SMRT_dir` : Path to the SMRT Link output directory.
-- `assembly_fasta` : Path to the assembled FASTA file (e.g., from Hifiasm or Flye).
 
