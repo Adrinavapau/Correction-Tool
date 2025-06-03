@@ -42,7 +42,7 @@ These files are essential for **manual clustering**, which is **strongly recomme
 
 #### Steps for Manual Clustering:
 
-1. **Normalize the data**: Divide the values in `summary.csv` by the corresponding values in `result.csv`. This gives you the methylation ratio per motif per contig.
+1. **Normalize the data**: Divide the values in `summary.csv` by the corresponding values in `resultados.csv`. This gives you the methylation ratio per motif per contig.
 
 2. **Cluster the data manually** using your preferred method and parameters. This allows for tailored analysis based on the unique properties of your dataset.
 
