@@ -94,13 +94,16 @@ This step will create the new methylation-informed bins.
 
 ---
 
+
 ## Developer Guide and Code Workflow
 
 This section explains each script used in the project and its role in the overall workflow.
 
+**Codes marked with * can be used on their own.**
+
 ---
 
-### `runMethylfromGenome.slurm`
+### `runMethylfromGenome.slurm *`
 This script uses **SMRT Link tools** and is executed **before** the main script `correction_tool.sh`.  
 **Requirements:**
 - Raw BAM file with the reads
@@ -109,7 +112,7 @@ This script uses **SMRT Link tools** and is executed **before** the main script 
 
 ---
 
-### `correction_tool.sh`
+### `correction_tool.sh *`
 This is the **main script**, responsible for executing the rest of the scripts based on the input parameters.  
 **Requirements:**
 - Directory containing the original bins  
@@ -150,7 +153,7 @@ To normalize the data, divide the number of methylated motifs by the total motif
 
 ---
 
-### `finalstep.sh`
+### `finalstep.sh *`
 This script can be used **independently** if methylation clusters have been created manually.  
 **Requirements:**
 - Directory of original bins  
