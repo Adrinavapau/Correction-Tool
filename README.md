@@ -122,7 +122,7 @@ This is the **main script**, responsible for executing the rest of the scripts b
 ---
 
 ### `SMRT_unmapped.sh`
-Used as an **alternative** if SMRT Link has compatibility or execution issues.  
+Used as an **alternative** if SMRT Link has execution issues or the normalized data have inf values.  
 This script aligns the context of motifs to detect mismatches.
 
 ---
