@@ -1,1 +1,5 @@
-https://drive.google.com/drive/u/0/folders/1diTKquXCEVXz3KIsml_0f6BLDxch-rwn
+Install the last version.
+
+Leave the installation in this directory, such as SMRTlink/smrtlink251R.
+
+https://www.pacb.com/smrt-link/
