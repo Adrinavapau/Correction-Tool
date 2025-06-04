@@ -116,7 +116,7 @@ This script uses **SMRT Link tools** and is executed **before** the main script 
 This is the **main script**, responsible for executing the rest of the scripts based on the input parameters.  
 **Requirements:**
 - Directory containing the original bins  
-- Output files from `runMethylfromGenome.slurm`  
+- Output dir from `runMethylfromGenome.slurm` or SMRT link  
 - Assembled FASTA file
 
 ---
