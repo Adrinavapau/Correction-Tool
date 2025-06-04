@@ -158,7 +158,8 @@ This script can be used **independently** if methylation clusters have been crea
 **Requirements:**
 - Directory of original bins  
 - Cluster file (format described in **Recommended Workflow**)  
-- Assembled FASTA  
+- Assembled FASTA
+
 This script runs different tools to analyze the bins.
 
 ---
