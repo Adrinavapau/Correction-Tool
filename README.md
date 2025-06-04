@@ -92,5 +92,13 @@ These files are essential for **manual clustering**, which is **strongly recomme
 
 This step will create the new methylation-informed bins.
 
+---
+
+#### Developer Guide and Code Workflow
+
+
+
+
+
 
 
