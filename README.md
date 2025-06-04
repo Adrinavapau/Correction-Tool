@@ -30,7 +30,7 @@ cd CorrectionTool
 
 ```bash
 cd CorrectionTool
-./correction_tool.sh [-s] [-t] [-c] <bins_dir> <SMRT_dir> <assembly_fasta>
+./correction_tool.sh [-s] [-t] [-c] <bins_dir> <SMRT_out> <assembly_fasta>
 ```
 
 ### Optional Flags
