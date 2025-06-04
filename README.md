@@ -55,7 +55,7 @@ The `-c` option uses a default clustering method with fixed parameters. This may
 ### Required Arguments
 
 - `bins_dir` : Path to the directory containing the original bins.
-- `SMRT_dir` : Path to the SMRT Link output directory.
+- `SMRT_out` : Path to the SMRT Link output directory.
 - `assembly_fasta` : Path to the assembled FASTA file (e.g., from Hifiasm or Flye).
 
 ---
