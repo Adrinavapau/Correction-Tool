@@ -19,11 +19,19 @@ This command installs all necessary dependencies for the proper functioning of t
 
 First, install SMRT Link in the SMRT Link directory.
 
+Then, download the data from this link into a directory:
+https://zenodo.org/records/15647129?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjAyN2ZkZDJhLTIxMGMtNDY0NS1hNDJhLTBmMDA1YjM4MjM3ZCIsImRhdGEiOnt9LCJyYW5kb20iOiI2NDY4OGMzMDRmM2YxMmIzOTdiMWZjMWEzNWQyMTM3ZCJ9.vUrUbV4U3RXzC7xWNc1yKyWjMzXHWTiMXW3Wz5yV1Mtyzpo76QVyCoTpKRZZLAfLzqP5Opwecnjc7dxdoUY_DQ
+
 ```bash
 cd CorrectionTool
+./runMethylfromGenome.slurm merged_ccs {Path to the directory where the data is}
+```
 
-./runMethylfromGenome.slurm
+Once you have the download the data, generate the bins. After that, you can use the correction tool:
 
+```bash
+cd CorrectionTool
+./correction_tool.sh <bins_dir> <SMRT_out> <assembly_fasta>
 ```
 
 ## Usage
