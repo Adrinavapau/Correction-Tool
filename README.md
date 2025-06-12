@@ -31,7 +31,7 @@ Once you have the download the data, generate the bins. After that, you can use 
 
 ```bash
 cd CorrectionTool
-./correction_tool.sh <bins_dir> <SMRT_out> <assembly_fasta>
+./correction_tool.sh -c <bins_dir> <SMRT_out> <assembly_fasta>
 ```
 
 ## Usage
