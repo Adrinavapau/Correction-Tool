@@ -24,7 +24,7 @@ https://zenodo.org/records/15647129?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjAyN2ZkZ
 
 ```bash
 cd CorrectionTool
-./runMethylfromGenome.slurm merged_ccs {Path to the directory where the data is}
+./runMethylfromGenome.slurm merged_ccs <directoty data>
 ```
 
 Once you have the download the data, generate the bins. After that, you can use the correction tool:
