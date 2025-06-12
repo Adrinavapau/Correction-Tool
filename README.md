@@ -9,11 +9,22 @@ The Correction Tool is designed to integrate methylation information into genomi
 To set up the required environment, it is recommended to create a conda environment with the following command:
 
 ```bash
-wget https://raw.githubusercontent.com/Adrinavapau/Correction-Tool/main/environment_clean.yml
+git clone https://github.com/Adrinavapau/Correction-Tool/edit/main
 conda env create -f environment_clean.yml
 ```
 
 This command installs all necessary dependencies for the proper functioning of the tool.
+
+## Test
+
+First, install SMRT Link in the SMRT Link directory.
+
+```bash
+cd CorrectionTool
+
+./runMethylfromGenome.slurm
+
+```
 
 ## Usage
 
