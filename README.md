@@ -29,7 +29,8 @@ The downloaded files should be the following:
    - The corresponding PBI index file.
 
    - An assembled FASTA file generated using hifiasm-meta.
-    
+
+Run the SMRT Link program:
 ```bash
 cd CorrectionTool
 ./runMethylfromGenome.slurm merged_ccs <directoty data>
