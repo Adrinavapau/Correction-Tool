@@ -22,6 +22,14 @@ First, install SMRT Link in the SMRT Link directory.
 Then, download the data from this link into a directory:
 https://zenodo.org/records/15647129?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjAyN2ZkZDJhLTIxMGMtNDY0NS1hNDJhLTBmMDA1YjM4MjM3ZCIsImRhdGEiOnt9LCJyYW5kb20iOiI2NDY4OGMzMDRmM2YxMmIzOTdiMWZjMWEzNWQyMTM3ZCJ9.vUrUbV4U3RXzC7xWNc1yKyWjMzXHWTiMXW3Wz5yV1Mtyzpo76QVyCoTpKRZZLAfLzqP5Opwecnjc7dxdoUY_DQ
 
+The downloaded files should be the following:
+
+   - A BAM file with raw HiFi reads.
+
+   - The corresponding PBI index file.
+
+   - An assembled FASTA file generated using hifiasm-meta.
+    
 ```bash
 cd CorrectionTool
 ./runMethylfromGenome.slurm merged_ccs <directoty data>
