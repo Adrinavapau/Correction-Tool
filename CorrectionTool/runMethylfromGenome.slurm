@@ -9,14 +9,9 @@
 #SBATCH --partition=pibu_el8
 #SBATCH -x binfservas18
 
-module add SAMtools/1.13-GCC-10.3.0 
-
-# Find the latest version of the smrtlink directory
-latest_smrtlink=$(ls -1d ../SMRTlink/smrtlink* | sort -V | tail -n 1)
-
 # This code uses SMRTlink data and tools to detect the methylated motif.
 
-export SMRT_ROOT="$latest_smrtlink"
+export SMRT_ROOT=$3
 export TMPDIR="smrttempdir1"
 
 ret=$(pwd)
