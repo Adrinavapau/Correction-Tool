@@ -32,6 +32,8 @@ The downloaded files should be the following:
 
    - An assembled FASTA file generated using hifiasm-meta.
 
+   - 5 bin files which are .fa
+     
 Run the SMRT Link program:
 ```bash
 cd CorrectionTool
