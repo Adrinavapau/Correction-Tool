@@ -19,7 +19,7 @@ This command installs all necessary dependencies for the proper functioning of t
 
 ## Test
 
-First, install SMRT Link in the SMRT Link directory.
+**First, install SMRT Link in the SMRT Link directory.**
 
 Then, download the data from this link into two different directories: place the bin files in one directory and the other data in another.
 https://zenodo.org/records/15680286?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjQxYjYzZjY3LTI0OWEtNGIyNS1hMjkwLTViZDNhMzM0MGExOCIsImRhdGEiOnt9LCJyYW5kb20iOiJhNzg4NjYwYzdhMDlhNDAyZWVjNzUwMWI1ZWU3ZDBlMyJ9.qwW1gg59mp392gFlAQqZnAMdCgPmIibGCBnZ8G2OpC9CO9r1hDCkbjtwrkIjYQM4aYsE1PIJ55xLDya6bTyjhw
