@@ -10,6 +10,7 @@ To set up the required environment, it is recommended to create a conda environm
 
 ```bash
 git clone https://github.com/Adrinavapau/Correction-Tool
+cd Correction-Tool/
 conda env create -f environment_clean.yml
 ```
 
