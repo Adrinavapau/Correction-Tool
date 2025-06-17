@@ -37,7 +37,7 @@ The downloaded files should be the following:
 Run the SMRT Link program:
 ```bash
 cd CorrectionTool
-./runMethylfromGenome.slurm merged_ccs <directoty data>
+./runMethylfromGenome.slurm merged_ccs <directoty data> <directoty SMRTlink>
 ```
 
 Once you have the download the data, generate the bins. After that, you can use the correction tool:
