@@ -13,6 +13,7 @@ git clone https://github.com/Adrinavapau/Correction-Tool
 cd Correction-Tool/
 conda env create -f environment_clean.yml
 conda activate Correction_tool
+checkm2 database --download
 ```
 
 This command installs all necessary dependencies for the proper functioning of the tool.
